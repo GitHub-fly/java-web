@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.login.entity.Book" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: xunmi
   Date: 2019/9/28
@@ -10,7 +11,6 @@
 <head>
     <title>首页</title>
 </head>
-<body>
 <style type="text/css">
     * {
         margin: 0;

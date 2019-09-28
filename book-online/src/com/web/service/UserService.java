@@ -3,6 +3,7 @@ package com.web.service;
 import com.web.entity.User;
 import com.web.util.Md5Util;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,9 +29,9 @@ public class UserService {
     public List<User> init() {
         userList = new ArrayList<User>(3);
         User[] users = {
-                new User("123", "202cb962ac59075b964b07152d234b70", "开到荼蘼", "1.jpg"),
-                new User("456", "250cf8b51c773f3f8dc8b4be867a9a02", "小幸运", "2.jpg"),
-                new User("789", "68053af2923e00204c3ca7c6a3150cf7", "往后余生", "3.jpg")
+                new User(1, "123", "202cb962ac59075b964b07152d234b70", "开到荼蘼", "1.jpg", "江苏南京", LocalDate.of(2019, 1, 10)),
+                new User(2, "456", "250cf8b51c773f3f8dc8b4be867a9a02", "小幸运", "2.jpg", "浙江杭州", LocalDate.of(2019, 2, 20)),
+                new User(3, "789", "68053af2923e00204c3ca7c6a3150cf7", "往后余生", "3.jpg", "湖北武汉", LocalDate.of(2019, 5, 20))
         };
         userList = Arrays.asList(users);
         return userList;

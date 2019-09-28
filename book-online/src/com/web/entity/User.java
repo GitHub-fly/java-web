@@ -1,30 +1,45 @@
 package com.web.entity;
 
+import java.time.LocalDate;
+
 /**
  * @author xunmi
  * @ClassName User
- * @Description 学生实体类
+ * @Description 用户实体类
  * @Date 2019/9/27
  * @Version 1.0
  **/
 public class User {
 
-    private  String account;
+    private Integer id;
+    private String account;
     private String password;
     private String nickname;
     private String avatar;
+    private String address;
+    private LocalDate joinDate;
 
     public User() {
 
     }
 
-    public User(String account, String password, String nickname, String avatar) {
+    public User(Integer id, String account, String password, String nickname, String avatar, String address, LocalDate joinDate) {
+        this.id = id;
         this.account = account;
         this.password = password;
         this.nickname = nickname;
         this.avatar = avatar;
+        this.address = address;
+        this.joinDate = joinDate;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getAccount() {
         return account;
@@ -58,14 +73,32 @@ public class User {
         this.avatar = avatar;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public LocalDate getJoinDate() {
+        return joinDate;
+    }
+
+    public void setJoinDate(LocalDate joinDate) {
+        this.joinDate = joinDate;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "account='" + account + '\'' +
+                "id=" + id +
+                ", account='" + account + '\'' +
                 ", password='" + password + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", avatar='" + avatar + '\'' +
+                ", address='" + address + '\'' +
+                ", joinDate=" + joinDate +
                 '}';
     }
-
 }
